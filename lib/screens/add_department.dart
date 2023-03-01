@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:registration_app_dashboard/controller/add_travel_controller.dart';
-import 'package:registration_app_dashboard/widgets/custom_textfield.dart';
+import '../controller/add_data_controller.dart';
+import '../widgets/custom_textfield.dart';
 
 class AddDepartment extends StatelessWidget {
   const AddDepartment({Key? key}) : super(key: key);
@@ -23,8 +23,8 @@ Widget form(context) {
   TextEditingController n = TextEditingController();
   var height = MediaQuery.of(context).size.height;
   var width = MediaQuery.of(context).size.width;
-  return GetBuilder<AddTravelController>(
-      init: AddTravelController(),
+  return GetBuilder<AddDataController>(
+      init: AddDataController(),
       builder: (_) {
         return Form(
           key: _.formKey,

@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:registration_app_dashboard/widgets/custom_button.dart';
-import 'package:registration_app_dashboard/widgets/loading.dart';
-import 'package:registration_app_dashboard/widgets/snackbar.dart';
+import '../widgets/custom_button.dart';
+import '../widgets/loading.dart';
+import '../widgets/snackbar.dart';
 
 class ShowStudent extends StatefulWidget {
   const ShowStudent({Key? key}) : super(key: key);

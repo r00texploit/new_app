@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:registration_app_dashboard/controller/auth_controller.dart';
-import 'package:registration_app_dashboard/screens/home.dart';
-import 'package:registration_app_dashboard/widgets/custom_button.dart';
-import 'package:registration_app_dashboard/widgets/custom_textfield.dart';
+import '../controller/auth_controller.dart';
+import '../screens/home.dart';
+import '../widgets/custom_button.dart';
+import '../widgets/custom_textfield.dart';
 
 class LoginPage extends StatelessWidget {
   @override

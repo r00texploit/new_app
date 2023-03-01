@@ -2,13 +2,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:registration_app_dashboard/screens/home.dart';
-import 'package:registration_app_dashboard/screens/registrar_home.dart';
-import 'package:registration_app_dashboard/screens/registrar_page.dart';
-import 'package:registration_app_dashboard/screens/sign_in_page.dart';
-import 'package:registration_app_dashboard/screens/welcome_page.dart';
-import 'package:registration_app_dashboard/widgets/loading.dart';
-import 'package:registration_app_dashboard/widgets/snackbar.dart';
+import '../screens/home.dart';
+import '../screens/registrar_home.dart';
+import '../screens/registrar_page.dart';
+import '../screens/sign_in_page.dart';
+import '../screens/welcome_page.dart';
+import '../widgets/loading.dart';
+import '../widgets/snackbar.dart';
 
 class AuthController extends GetxController {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();

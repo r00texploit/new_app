@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:registration_app_dashboard/controller/auth_controller.dart';
-import 'package:registration_app_dashboard/screens/add-registrar.dart';
-import 'package:registration_app_dashboard/screens/add_department.dart';
-import 'package:registration_app_dashboard/screens/add_student.dart';
-import 'package:registration_app_dashboard/screens/show_student.dart';
+import '../controller/auth_controller.dart';
+import '../screens/add-registrar.dart';
+import '../screens/add_department.dart';
+import '../screens/add_student.dart';
+import '../screens/show_student.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: 'Add Registrar',
                   nav: AddRegistrar(),
                 ),
-                 Card_d(
+                Card_d(
                   icon: Icon(Icons.person, size: 30, color: Colors.white),
                   title: 'Add Department',
                   nav: AddDepartment(),

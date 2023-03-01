@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:registration_app_dashboard/widgets/custom_button.dart';
-import 'package:registration_app_dashboard/widgets/loading.dart';
+import '../widgets/custom_button.dart';
+import '../widgets/loading.dart';
 
 class RegistrarPage extends StatefulWidget {
   const RegistrarPage({Key? key}) : super(key: key);

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:registration_app_dashboard/widgets/custom_textfield.dart';
+import '../widgets/custom_textfield.dart';
 
-import '../controller/add_travel_controller.dart';
+import '../controller/add_data_controller.dart';
 
 class AddRegistrar extends StatelessWidget {
   const AddRegistrar({Key? key}) : super(key: key);
@@ -23,8 +23,8 @@ Widget form(context) {
   TextEditingController n = TextEditingController();
   var height = MediaQuery.of(context).size.height;
   var width = MediaQuery.of(context).size.width;
-  return GetBuilder<AddTravelController>(
-      init: AddTravelController(),
+  return GetBuilder<AddDataController>(
+      init: AddDataController(),
       builder: (_) {
         return Form(
           key: _.formKey,

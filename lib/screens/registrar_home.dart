@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:registration_app_dashboard/controller/auth_controller.dart';
-import 'package:registration_app_dashboard/screens/add-registrar.dart';
-import 'package:registration_app_dashboard/screens/add_student.dart';
-import 'package:registration_app_dashboard/screens/registrar_page.dart';
-import 'package:registration_app_dashboard/screens/show_student.dart';
+import '../controller/auth_controller.dart';
+import '../screens/add-registrar.dart';
+import '../screens/add_student.dart';
+import '../screens/registrar_page.dart';
+import '../screens/show_student.dart';
 
 class RegistrarHome extends StatefulWidget {
   const RegistrarHome({Key? key}) : super(key: key);

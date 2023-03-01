@@ -5,12 +5,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:registration_app_dashboard/widgets/loading.dart';
+import '../widgets/loading.dart';
 import 'dart:io';
 import '../widgets/snackbar.dart';
 import 'package:path/path.dart';
 
-class AddTravelController extends GetxController {
+class AddDataController extends GetxController {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   late TextEditingController name, dep, price, no, email, password;
   DateTime time = DateTime.now();
@@ -83,13 +83,13 @@ class AddTravelController extends GetxController {
       return;
     } else {
       showdilog();
-FirebaseAuth auth = FirebaseAuth.instance;
-final credential = await auth.createUserWithEmailAndPassword(
-            email: email.text, password: password.text);
-        credential.user!.updateDisplayName(name.text);
-        await credential.user!.reload();
+      FirebaseAuth auth = FirebaseAuth.instance;
+      final credential = await auth.createUserWithEmailAndPassword(
+          email: email.text, password: password.text);
+      credential.user!.updateDisplayName(name.text);
+      await credential.user!.reload();
       var re = <String, dynamic>{
-      'uid': credential.user!.uid,
+        'uid': credential.user!.uid,
         "No": int.tryParse(no.text),
         "department": dep.text,
         "name": name.text,
@@ -142,7 +142,8 @@ final credential = await auth.createUserWithEmailAndPassword(
       }
     }
   }
-   void addDepartment() async {
+
+  void addDepartment() async {
     final isValid = formKey.currentState!.validate();
     if (!isValid) {
       update();
@@ -150,10 +151,7 @@ final credential = await auth.createUserWithEmailAndPassword(
     } else {
       try {
         showdilog();
-        await FirebaseFirestore.instance
-            .collection('department')
-            .doc()
-            .set({
+        await FirebaseFirestore.instance.collection('department').doc().set({
           'department': dep.text,
         });
         Get.back();
